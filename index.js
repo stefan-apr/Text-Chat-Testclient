@@ -8,6 +8,8 @@ const io = require('socket.io-client');
 dotenv.config();
 
 const socket = io.connect('https://text-chat-service.herokuapp.com/', {reconnect: true});
+// Below for testing purposes.
+// const socket = io.connect('http://localhost:3000', {reconnect: true});
 
 socket.on("connect", () => {
     console.log('Connected to the chat server');
